@@ -1,5 +1,5 @@
 object tydzien {
-  
+
   def main(args: Array[String]): Unit = {
     val dniTygodnia = List("Poniedziałek","Wtorek","Środa","Czwartek","Piątek","Sobota","Niedziela")
 
@@ -97,7 +97,20 @@ object tydzien {
     println("XY to kod kraju " + kod_kraju.get("XY"))
     println("XY to kod kraju " + kod_kraju.get("XY").getOrElse("żadnego"))
 
+
     //zad8
+    var lista = List(0,1,0,2,4,5,1,0)
+    def usun0(myList: List[Int]): List[Int] = myList match{
+      case Nil => Nil
+      case h :: t =>
+        if (h == 0){
+          usun0(t)
+      }
+      else{
+        h :: usun0(t)
+      }
+    }
+    println(usun0(lista))
 
     //zad9
     val calkowite = List(1, 4, 11, 3, 5).map(x=>x+1)
