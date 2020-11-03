@@ -35,7 +35,7 @@ object cw2 {
     kon1.wplata(100)
     kon1.wplata(200)
     kon1.wyplata(30)
-    var kon2 = new KontoBankowe(125)
+    var kon2 = new KontoBankowe()
     println(kon2._stanKonta)
 
 
